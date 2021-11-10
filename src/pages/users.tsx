@@ -61,7 +61,7 @@ export default function Users(): ReactElement {
     <div>
       {users && users.length > 0
         ? users?.map((user) => <div key={user.cpf}>{renderUserCard(user)}</div>)
-        : 'Não há usuários cadastrados'}
+        : <div className="no-users-found">Não há usuários cadastrados</div>}
     </div>
   );
 

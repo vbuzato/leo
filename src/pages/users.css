@@ -71,6 +71,10 @@ header {
   background-color: #E94646;
 }
 
+.no-users-found {
+  text-align: center;
+}
+
 @media screen and (max-width: 768px) {
   .users {
     padding: 0;
