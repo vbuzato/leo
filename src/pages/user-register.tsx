@@ -5,7 +5,9 @@ import './user-register.css';
 export default function UserRegister(): ReactElement {
   return (
     <div className="user-register">
-      <div className="img-user-register" />
+      <div className="background-green">
+        <div className="img-user-register" />
+      </div>
       <Form />
     </div>
   );

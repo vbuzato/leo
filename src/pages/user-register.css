@@ -14,18 +14,35 @@
   height: 100px;
 }
 
+.user-register .background-green {
+  width: 100%;
+  height: 100px;
+}
+
+
 @media screen and (min-width: 768px) {
   .user-register  {
     align-items: flex-end;
     height: 100vh;
   }
   .user-register .img-user-register {
-    width: 45%;
+    width: 125%;
     min-height: 400px;
+    position: absolute;
+    top: 25%;
+    left: -70px;
   }
   .user-register {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center; 
+  }
+  .user-register .background-green {
+    width: 45%;
+    height: 100vh;
+    border-left: 70px solid #313131;
+    border-right: 35px solid #ffffff;
+    position: relative;
+    background-color: #2B5840;
   }
 }
