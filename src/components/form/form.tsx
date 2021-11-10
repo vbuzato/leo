@@ -113,6 +113,7 @@ export default function Form(): ReactElement {
           mask="999.999.999-99"
           onChange={handleFormData}
           value={user.cpf}
+          disabled={isEditing}
         />
       </div>
       <div className="input-wrapper">

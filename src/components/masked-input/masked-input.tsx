@@ -2,6 +2,7 @@ import { ChangeEventHandler } from 'react';
 import InputMask from 'react-input-mask';
 
 type InputProps = {
+  disabled?: boolean,
   id: string,
   mask: string,
   onChange: ChangeEventHandler<HTMLInputElement>,
@@ -9,7 +10,7 @@ type InputProps = {
  }
 
 export default function MaskedInput({
-  id, value, onChange, mask,
+  disabled, id, value, onChange, mask,
 }: InputProps) {
   return (
     <InputMask
@@ -17,6 +18,7 @@ export default function MaskedInput({
       mask={mask}
       value={value}
       onChange={onChange}
+      disabled={disabled}
     />
   );
 }
