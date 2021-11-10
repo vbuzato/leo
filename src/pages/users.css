@@ -1,0 +1,78 @@
+.line {
+  background-color: #F6F6F6;
+}
+
+.users {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 24px;
+  width: 80%;
+  min-width: 320px;
+}
+
+.users h2{
+  padding-left: 16px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0;
+  min-width: 350px;
+}
+
+.users button {
+  width: 45%;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  margin: 20px auto;
+  
+}
+
+.users .bt-register {
+  color: white;
+  background-image: linear-gradient(35deg, #0A6B37, #33A30C );
+}
+
+.users .bt-register:hover {
+  color: white;
+  background: #3fad73;
+}
+
+.user-item {
+  padding: 6px 20px;
+}
+
+.user-item .title {
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.bt-edit {
+  color: #706500;
+  background-color: #E9D846;
+}
+
+.bt-delete {
+  color: #3d0808;
+  background-color: #E94646;
+}
+
+@media screen and (max-width: 768px) {
+  .users {
+    padding: 0;
+  }
+}

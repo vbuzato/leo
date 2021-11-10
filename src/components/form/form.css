@@ -1,0 +1,90 @@
+.register-form {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  padding: 24px;
+}
+
+.register-form input {
+  background-color: #F6F6F6;
+  border-radius: 6px;
+  border: none;
+  width: 100%;
+  height: 40px;
+  margin-top: 8px;
+  padding: 15px;
+}
+
+.register-form label {
+  font-size: 16px;
+}
+
+.register-form .input-wrapper {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.register-form button {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  margin: 20px 0 10px;
+  
+}
+
+.register-form .bt-register {
+  color: white;
+  background-image: linear-gradient(35deg, #0A6B37, #33A30C );
+}
+
+.register-form .bt-user-list {
+  color: #2B5840;
+  border: 1px solid #B1D7B3;
+  background: white;
+  margin-top: 8px;
+}
+
+.register-form .bt-register:hover {
+  color: white;
+  background: #3fad73;
+}
+
+.register-form .bt-user-list:hover {
+  color: #15271d;;
+  background: #eeeeea;
+}
+
+.register-form .logo-leo {
+ width: 100px;
+ margin: 0 auto;
+}
+
+.register-form h2 {
+  font-size: 24px;
+  padding: 10px;
+  text-align: center;
+  font-weight: 300;
+}
+
+.info-message {
+  text-align: center;
+  color: #2B5840;
+}
+
+.error-message {
+  text-align: center;
+  color: #E94646;
+}
+
+@media screen and (min-width: 768px) {
+  .register-form {
+    padding-right: 7%;  
+  }
+}

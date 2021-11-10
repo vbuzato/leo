@@ -2,6 +2,8 @@ import { ReactElement, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getUsers, removeUser } from '../api';
 import type { UserProps } from '../components/form/form-types';
+import logo from '../assets/logoleo.png';
+import './users.css';
 
 export default function Users(): ReactElement {
   const [users, setUsers] = useState<UserProps[]>();
@@ -30,26 +32,28 @@ export default function Users(): ReactElement {
     } = user;
 
     return (
-      <>
-        <div>
-          <span>Nome:</span>
+      <div className="line">
+        <div className="user-item">
+          <span className="title">Nome:</span>
           <span>{nome}</span>
         </div>
-        <div>
-          <span>CPF:</span>
+        <div className="user-item">
+          <span className="title">CPF:</span>
           <span>{cpf}</span>
         </div>
-        <div>
-          <span>Telefone:</span>
+        <div className="user-item">
+          <span className="title">Telefone:</span>
           <span>{telefone}</span>
         </div>
-        <div>
-          <span>Email:</span>
+        <div className="user-item">
+          <span className="title">Email:</span>
           <span>{email}</span>
         </div>
-        <button type="button" onClick={() => onEdit(cpf)}>Editar</button>
-        <button type="button" onClick={() => onDelete(cpf)}>Excluir</button>
-      </>
+        <div className="button-wrapper">
+          <button className="bt-edit" type="button" onClick={() => onEdit(cpf)}>Editar</button>
+          <button className="bt-delete" type="button" onClick={() => onDelete(cpf)}>Excluir</button>
+        </div>
+      </div>
     );
   };
 
@@ -62,8 +66,13 @@ export default function Users(): ReactElement {
   );
 
   return (
-    <div>
+    <div className="users">
+      <header>
+        <img alt="Leo Madeiras" src={logo} className="logo-leo" />
+        <h2>Registro de Usuário</h2>
+      </header>
       {users ? renderUsers() : 'Carregando'}
+      <button type="button" className="bt-register" onClick={() => navigate('/')}>Cadastrar</button>
     </div>
   );
 }

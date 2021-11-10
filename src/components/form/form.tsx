@@ -6,6 +6,9 @@ import { useNavigate } from 'react-router-dom';
 import { saveUser, getUser } from '../../api';
 import type { UserProps } from './form-types';
 import MaskedInput from '../masked-input/masked-input';
+import './form.css';
+import logo from '../../assets/logoleo.png';
+
 import {
   isValidName,
   isValidCpf,
@@ -91,45 +94,55 @@ export default function Form(): ReactElement {
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <label htmlFor="nome">Nome: </label>
-      <input
-        id="nome"
-        value={user.nome}
-        type="text"
-        onChange={handleFormData}
-      />
+    <form className="register-form" onSubmit={onSubmit}>
+      <img alt="Leo Madeiras" src={logo} className="logo-leo" />
+      <h2>Registro de Usuário</h2>
+      <div className="input-wrapper">
+        <label htmlFor="nome">Nome: </label>
+        <input
+          id="nome"
+          value={user.nome}
+          type="text"
+          onChange={handleFormData}
+        />
+      </div>
+      <div className="input-wrapper">
+        <label htmlFor="cpf">CPF: </label>
+        <MaskedInput
+          id="cpf"
+          mask="999.999.999-99"
+          onChange={handleFormData}
+          value={user.cpf}
+        />
+      </div>
+      <div className="input-wrapper">
+        <label htmlFor="telefone">Telefone: </label>
+        <MaskedInput
+          id="telefone"
+          mask="(99) 99999-9999"
+          onChange={handleFormData}
+          value={user.telefone}
+        />
+      </div>
+      <div className="input-wrapper">
+        <label htmlFor="email">E-mail: </label>
+        <input
+          id="email"
+          value={user.email}
+          type="email"
+          onChange={handleFormData}
+        />
+      </div>
 
-      <label htmlFor="cpf">CPF: </label>
-      <MaskedInput
-        id="cpf"
-        mask="999.999.999-99"
-        onChange={handleFormData}
-        value={user.cpf}
-      />
+      <div className="info-message">{message ?? null}</div>
+      <div className="error-message">{invalidField ?? null}</div>
 
-      <label htmlFor="telefone">Telefone: </label>
-      <MaskedInput
-        id="telefone"
-        mask="(99) 99999-9999"
-        onChange={handleFormData}
-        value={user.telefone}
-      />
-
-      <label htmlFor="email">E-mail: </label>
-      <input
-        id="email"
-        value={user.email}
-        type="email"
-        onChange={handleFormData}
-      />
-
-      <button type="submit">
-        {(isEditing) ? 'Atualizar' : 'Cadastrar usuário'}
+      <button type="submit" className="bt-register">
+        {(isEditing) ? 'Atualizar' : 'Cadastrar'}
       </button>
-
-      <div>{message ?? null}</div>
-      <div>{invalidField ?? null}</div>
+      <button type="button" className="bt-user-list" onClick={() => navigate('/users')}>
+        Ver lista de usuários
+      </button>
     </form>
   );
 }
