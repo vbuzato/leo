@@ -1,0 +1,72 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"plugin:react/recommended",
+		"airbnb"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"plugins": [
+		"react",
+		"@typescript-eslint"
+	],
+	"rules": {
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [
+					".js",
+					".jsx",
+					".ts",
+					".tsx"
+				]
+			}
+		],
+		"react/react-in-jsx-scope": "off",
+		"import/no-unresolved": 0,
+		"import/extensions": 0,
+		"no-use-before-define": "off",
+		"@typescript-eslint/no-use-before-define": [
+			"error"
+		],
+		"jsx-a11y/label-has-associated-control": [
+			"error",
+			{
+				"required": {
+					"some": [
+						"nesting",
+						"id"
+					]
+				}
+			}
+		],
+		"no-unused-expressions": [
+			"error",
+			{
+				"allowShortCircuit": true,
+				"allowTernary": true
+			}
+		],
+		"react/jsx-props-no-spreading": "off",
+		"jsx-a11y/label-has-for": [
+			"error",
+			{
+				"required": {
+					"some": [
+						"nesting",
+						"id"
+					]
+				}
+			}
+		]
+	}
+}
