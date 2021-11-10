@@ -14,9 +14,9 @@ import {
 } from '../../utils';
 
 const initialUserState: UserProps = {
-  name: '',
+  nome: '',
   cpf: '',
-  phone: '',
+  telefone: '',
   email: '',
 };
 
@@ -55,13 +55,13 @@ export default function Form(): ReactElement {
     }
 
     switch (!!user) {
-      case !isValidName(user.name):
+      case !isValidName(user.nome):
         setInvalidField('Nome inválido');
         return false;
       case !isValidCpf(user.cpf):
         setInvalidField('CPF inválido');
         return false;
-      case !isValidPhone(user.phone):
+      case !isValidPhone(user.telefone):
         setInvalidField('Telefone inválido');
         return false;
       case !isValidEmail(user.email):
@@ -92,10 +92,10 @@ export default function Form(): ReactElement {
 
   return (
     <form onSubmit={onSubmit}>
-      <label htmlFor="name">Nome: </label>
+      <label htmlFor="nome">Nome: </label>
       <input
-        id="name"
-        value={user.name}
+        id="nome"
+        value={user.nome}
         type="text"
         onChange={handleFormData}
       />
@@ -108,12 +108,12 @@ export default function Form(): ReactElement {
         value={user.cpf}
       />
 
-      <label htmlFor="phone">Telefone: </label>
+      <label htmlFor="telefone">Telefone: </label>
       <MaskedInput
-        id="phone"
+        id="telefone"
         mask="(99) 99999-9999"
         onChange={handleFormData}
-        value={user.phone}
+        value={user.telefone}
       />
 
       <label htmlFor="email">E-mail: </label>

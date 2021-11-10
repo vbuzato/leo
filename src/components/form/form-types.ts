@@ -1,6 +1,6 @@
 export type UserProps = {
-  name: string,
+  nome: string,
   cpf: string,
-  phone: string,
+  telefone: string,
   email: string
 };

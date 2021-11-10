@@ -26,14 +26,14 @@ export default function Users(): ReactElement {
 
   const renderUserCard = (user: UserProps) => {
     const {
-      cpf, email, name, phone,
+      cpf, email, nome, telefone,
     } = user;
 
     return (
-      <div>
+      <>
         <div>
           <span>Nome:</span>
-          <span>{name}</span>
+          <span>{nome}</span>
         </div>
         <div>
           <span>CPF:</span>
@@ -41,7 +41,7 @@ export default function Users(): ReactElement {
         </div>
         <div>
           <span>Telefone:</span>
-          <span>{phone}</span>
+          <span>{telefone}</span>
         </div>
         <div>
           <span>Email:</span>
@@ -49,14 +49,14 @@ export default function Users(): ReactElement {
         </div>
         <button type="button" onClick={() => onEdit(cpf)}>Editar</button>
         <button type="button" onClick={() => onDelete(cpf)}>Excluir</button>
-      </div>
+      </>
     );
   };
 
   const renderUsers = () => (
     <div>
       {users && users.length > 0
-        ? users?.map((user) => renderUserCard(user))
+        ? users?.map((user) => <div key={user.cpf}>{renderUserCard(user)}</div>)
         : 'Não há usuários cadastrados'}
     </div>
   );

@@ -1,5 +1,5 @@
-function isValidName(name: string) {
-  if (name !== '' && name.match(/[a-zA-Z]+/)) {
+function isValidName(nome: string) {
+  if (nome !== '' && nome.match(/[a-zA-Z]+/)) {
     return true;
   }
 
@@ -14,8 +14,8 @@ function isValidCpf(cpf: string) {
 
   return false;
 }
-function isValidPhone(phone: string) {
-  if (phone !== '' && phone.match(/^\([0-9]{2}\) [0-9]{5}-[0-9]{4}$/)) {
+function isValidPhone(telefone: string) {
+  if (telefone !== '' && telefone.match(/^\([0-9]{2}\) [0-9]{5}-[0-9]{4}$/)) {
     return true;
   }
 
