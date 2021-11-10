@@ -1,3 +1,15 @@
+# Layout feito no figma
+
+![](./src/assets/leo-registrar.png)
+![](./src/assets/leo-lista-usuarios.png)
+
+
+### Deivdo ao tempo de realização do teste (menos de 1 dia), não foi possível concluir o css do layout desenhado acima. Mas todas as funções solicitadas estão ok. 
+
+![](./src/assets/leo.gif)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -6,6 +18,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm install`
 ### `npm start`
 
 Runs the app in the development mode.\
